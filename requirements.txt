@@ -1,0 +1,6 @@
+Flask
+git+https://github.com/rongardF/tvdatafeed
+gunicorn
+yfinance
+datetime
+pandas
