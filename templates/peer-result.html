@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Peer Performance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="topnav">
+            <img src="{{ url_for('static', filename='favicon.png') }}" class="logo">
+            <a href="/contact" class="menuitem">Team</a>
+            <a href="/peer" class="active_menuitem">Peer Performance</a>
+            <a href="/fpp" class="menuitem">Fetch Factor</a>
+            <a href="/" class="menuitem">Home</a>
+        </div>
+        <div class="center">
+            <span class="heading">Peer Performance</span>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="desc">Description of PP</h2>
+        <table>
+            <tr>
+                <th style="width: 50%;">Ticker</th>
+                <th>daily increase rate(in %)</th>
+            </tr>
+            {% for data in datatable %}
+            <tr>
+                <td>{{ data[0] }}</td>
+                <td>{{ data[1] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <footer>
+        Get in touch with us at info.stocksurgeons@gmail.com
+    </footer>
+
+</body>
+
+</html>

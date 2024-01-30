@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fetch Factor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="topnav">
+            <img src="{{ url_for('static', filename='favicon.png') }}" class="logo">
+            <a href="/contact" class="menuitem">Team</a>
+            <a href="/peer" class="menuitem">Peer Performance</a>
+            <a href="/fpp" class="active_menuitem">Fetch Factor</a>
+            <a href="/" class="menuitem">Home</a>
+        </div>
+        <div class="center">
+            <span class="heading">Fetch Factor</span>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="desc">Description of fpp</h2>
+        <div class="form">
+            <h1 style="display: flex; align-items: center; justify-content: center;">Here is the working!</h1>
+            <form method="POST" action="/fpp/search">
+                <label for="stock">Enter Stock Name: </label><input type="text" name="stock" id="stock">
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <footer>
+        Get in touch with us at info.stocksurgeons@gmail.com
+    </footer>
+
+</body>
+
+</html>
+</body>
+
+</html>

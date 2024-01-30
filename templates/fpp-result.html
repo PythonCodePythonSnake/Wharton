@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fetch Factor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="topnav">
+            <img src="{{ url_for('static', filename='favicon.png') }}" class="logo">
+            <a href="/contact" class="menuitem">Team</a>
+            <a href="/peer" class="menuitem">Peer Performance</a>
+            <a href="/fpp" class="active_menuitem">Fetch Factor</a>
+            <a href="/" class="menuitem">Home</a>
+        </div>
+        <div class="center">
+            <span class="heading">Fetch Factor</span>
+        </div>
+    </div>
+    <div>
+        <h2 class="desc">Final Result</h2>
+        <div class="speedometer-container team">
+            <img src="{{ url_for('static', filename='meter.png') }}" width="50%">
+            <img class="needle" src="{{ url_for('static', filename='knob.png') }}" id="knob">
+        </div>
+        <h2 class="desc">Risk as percentage is {{risk}}</h2>
+    </div>
+    <footer>
+        Get in touch with us at info.stocksurgeons@gmail.com
+    </footer>
+    <script>
+        function rot(extra) {
+            var rotationAngle = -130 + (extra * 2.6)
+            document.getElementById("knob").style.transform = "rotate(" + rotationAngle + "deg)";
+        }
+        rot({{ risk }});
+    </script>
+</body>
+
+</html>

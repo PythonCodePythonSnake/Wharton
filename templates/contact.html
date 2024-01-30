@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stock Surgeons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="topnav">
+            <img src="{{ url_for('static', filename='favicon.png') }}" class="logo">
+            <a href="/contact" class="active_menuitem">Team</a>
+            <a href="/peer" class="menuitem">Peer Performance</a>
+            <a href="/fpp" class="menuitem">Fetch Factor</a>
+            <a href="/" class="menuitem">Home</a>
+        </div>
+        <div class="center">
+            <span class="heading">Stock Surgeons</span>
+        </div>
+    </div>
+
+    <div>
+        <div style="height: 30px;"></div>
+        <section class="desc">On-call Surgeons</section>
+        <div style="height: 30px;"></div>
+        <section id="row1" class="team">
+            <br>
+            <div class="team_member_details">
+                <div id="Ananya Goswami" style="padding-left: 5%;padding-right: 5%;">
+                    <img src="{{ url_for('static', filename='Ananya.png') }}" width="150px">
+                    <p>Ananya Goswami</p>
+                    <small><p>Chief Surgeon of Investments</p></small>
+                    <small><p>ananya.goswami@ais.amity.edu</p></small>
+                </div>
+                <div id="Aarav Mahajan" style="padding-left: 5%;padding-right: 5%;">
+                    <img src="{{ url_for('static', filename='download.png') }}" width="150px">
+                    <p>Aarav Mahajan</p>
+                    <small><p>Investment Strategist and Operation Planner</p></small>
+                    <small><p>aarav.mahajan@ais.amity.edu</p></small>
+                </div>
+                <div id="Aanya Ahuja" style="padding-left: 5%;padding-right: 5%;">
+                    <img src="{{ url_for('static', filename='download.png') }}" width="150px">
+                    <p>Aanya Ahuja</p>
+                    <small><p>Quantitative Mastery Surgeon</p></small>
+                    <small><p>aanya.ahuja@ais.amity.edu</p></small>
+                </div>
+                <div id="Ishita Madaan" style="padding-left: 5%;padding-right: 5%;">
+                    <img src="{{ url_for('static', filename='Ishita.png') }}" width="150px">
+                    <p>Ishita Madaan</p>
+                    <small><p>Financial Equity and Data Suture Surgeon</p></small>
+                    <small><p>ishita.madaan@ais.amity.edu</p></small>
+                </div>
+            </div>
+        </section>
+        <section id="row2" class="team">
+            <br>
+            <div class="team_member_details">
+                <div id="Gauri Mishra" style="padding-left: 5%;padding-right: 5%;">
+                    <img src="{{ url_for('static', filename='download.png') }}" width="150px">
+                    <p>Gauri Mishra</p>
+                    <small><p>Scalpel Portfolio Manager</p></small>
+                    <small><p>gauri.mishra@ais.amity.edu</p></small>
+                </div>
+                <div id="Manasvi Panwar" style="padding-left: 5%;padding-right: 5%;">
+                    <img src="{{ url_for('static', filename='download.png') }}" width="150px">
+                    <p>Manasvi Panwar</p>
+                    <small><p>Risk Management Surgeon</p></small>
+                    <small><p>manasvi.panwar@ais.amity.edu</p></small>
+                </div>
+                <div id="Praneel Pathak" style="padding-left: 5%;padding-right: 5%;">
+                    <img src="{{ url_for('static', filename='Praneel.png') }}" width="150px">
+                    <p>Praneel Pathak</p>
+                    <small><p>Algorithmic Precision Specialist</p></small>
+                    <small><p>praneel.pathak1@ais.amity.edu</p></small>
+                </div>
+            </div>
+        </section>
+    </div>
+    <br>
+    <br>
+    <footer>
+        Get in touch with us at info.stocksurgeons@gmail.com
+    </footer>
+
+</body>
+
+</html>

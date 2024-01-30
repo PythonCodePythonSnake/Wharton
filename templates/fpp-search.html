@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fetch Factor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="topnav">
+            <img src="{{ url_for('static', filename='favicon.png') }}" class="logo">
+            <a href="/contact" class="menuitem">Team</a>
+            <a href="/peer" class="menuitem">Peer Performance</a>
+            <a href="/fpp" class="active_menuitem">Fetch Factor</a>
+            <a href="/" class="menuitem">Home</a>
+        </div>
+        <div class="center">
+            <span class="heading">Fetch Factor</span>
+        </div>
+    </div>
+    <div>
+        <h2 class="desc">Stocks Found</h2>
+        <div class="form">
+            <h1 style="display: flex; align-items: center; justify-content: center;">Here is the working!</h1>
+            <form method="POST" action="/fpp/details">
+                <label for="ticker">Enter Ticker: </label>
+                <select name="ticker" id="ticker" required>
+                    <option value="none" selected disabled>SELECT</option>
+                    {% for data in datatable %}
+                    <h1>
+                        <option value="{{data[1]}}">{{data[1]}}</option>
+                    </h1>
+                    {% endfor %}
+                </select>
+                <label for="time">Enter Timeframe: </label>
+                <select name="time" id="time" required>
+                    <option value="none" selected disabled>SELECT</option>
+                    <option value="1">Last Hour</option>
+                    <option value="2">Last Day</option>
+                    <option value="3">Last Week</option>
+                    <option value="4">Last Month</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <br>
+        <table>
+            <tr>
+                <th>Index</th>
+                <th>Ticker</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Country</th>
+            </tr>
+            {% for data in datatable %}
+            <tr id="{{data[0]}}" onclick="document.getElementById('ticker').value = '{{ data[1] }}';">
+                <td>{{data[0]}}</td>
+                <td>{{data[1]}}</td>
+                <td>{{data[2]}}</td>
+                <td>{{data[3]}}</td>
+                <td>{{data[4]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <footer>
+        Get in touch with us at info.stocksurgeons@gmail.com
+    </footer>
+</body>
+
+</html>
