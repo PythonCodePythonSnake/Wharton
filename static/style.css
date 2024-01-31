@@ -127,7 +127,8 @@ table {
 
 table,
 tr,
-td {
+td
+.stocks {
     border: 1px solid grey;
     border-collapse: collapse;
 }
@@ -137,8 +138,9 @@ td {
     padding: 15px;
 }
 
-tr:hover {
+.stocks:hover {
     background-color: #D6EEEE;
+    cursor: pointer;
 }
 
 .team_head {
