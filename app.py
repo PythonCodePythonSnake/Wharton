@@ -142,9 +142,9 @@ with open("ticker_classes.json") as file:
     sector_data = dict(loads(file.read()))
 with open("values.json") as file:
     values = dict(loads(file.read()))
-if values["Time"] != datetime.today().strftime("%Y-%m-%d"): 
+'''if values["Time"] != datetime.today().strftime("%Y-%m-%d"): 
     print("Updating Data")
-    update_data()
+    update_data()'''
 summ = {}
 summ["Stock"], summ["ETF"] = list(sector_data["Stock"].keys()), list(sector_data["ETF"].keys())
 tv = TvDatafeed(username="", password="")
