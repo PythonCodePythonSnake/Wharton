@@ -142,6 +142,10 @@ tr:hover {
     cursor: pointer;
 }
 
+.stock_head:hover {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
 .team_head {
     background-color: green;
     width: 100%;
