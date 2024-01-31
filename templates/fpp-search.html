@@ -56,7 +56,7 @@
                 <th>Country</th>
             </tr>
             {% for data in datatable %}
-            <tr id="{{data[0]}}" onclick="document.getElementById('ticker').value = '{{ data[1] }}';">
+            <tr class="stock" id="{{data[0]}}" onclick="document.getElementById('ticker').value = '{{ data[1] }}';">
                 <td>{{data[0]}}</td>
                 <td>{{data[1]}}</td>
                 <td>{{data[2]}}</td>
