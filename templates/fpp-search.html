@@ -26,7 +26,7 @@
         <div class="form">
             <h1 style="display: flex; align-items: center; justify-content: center;">Here is the working!</h1>
             <form method="POST" action="/fpp/details">
-                <label for="ticker">Enter Ticker: </label>
+                <label for="ticker">Select Ticker: </label>
                 <select name="ticker" id="ticker" required>
                     <option value="none" selected disabled>SELECT</option>
                     {% for data in datatable %}
@@ -35,7 +35,7 @@
                     </h1>
                     {% endfor %}
                 </select>
-                <label for="time">Enter Timeframe: </label>
+                <label for="time">Select Timeframe: </label>
                 <select name="time" id="time" required>
                     <option value="none" selected disabled>SELECT</option>
                     <option value="1">Last Hour</option>
@@ -56,7 +56,7 @@
                 <th>Country</th>
             </tr>
             {% for data in datatable %}
-            <tr id="{{data[0]}}" onclick="document.getElementById('ticker').value = '{{ data[1] }}';">
+            <tr id="{{data[0]}}" onclick="document.getElementById('ticker').value = '{{ data[1] }}';" onmouseover="this.style.background-color='#0000FF';" onmouseout="this.style.background-color='#FFFFFF';">
                 <td>{{data[0]}}</td>
                 <td>{{data[1]}}</td>
                 <td>{{data[2]}}</td>
