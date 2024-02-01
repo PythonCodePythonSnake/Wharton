@@ -101,12 +101,10 @@ def peer_result():
     result = []
     for ticker in all_tickers:
         if ticker not in values["Data"]:
-            print("ticker")
             continue
         curr = values["Data"][ticker]
         result.append([ticker, round((curr[0]-curr[1])/curr[1]*100, 2)])
     result = sorted(result, key=lambda x: x[1], reverse=True)
-    return result
     return render_template("peer-result.html", datatable=result)
 
 @app.route("/fpp/indicate", methods=["POST", "GET"])
