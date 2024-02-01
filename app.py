@@ -101,7 +101,7 @@ def peer_result():
     result = []
     for ticker in all_tickers:
         try: curr = values["Data"][ticker]
-            except: continue
+        except: continue
         result.append([ticker, round((curr[0]-curr[1])/curr[1]*100, 2)])
     result = sorted(result, key=lambda x: x[1], reverse=True)
     return render_template("peer-result.html", datatable=result)
