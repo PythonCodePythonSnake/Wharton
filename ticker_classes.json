@@ -373,5 +373,5 @@
             "UGI"
         ]
     },
-    "ETF": {}
+    "ETF": {"Blend": ["EWA", "EWZ", "BBCA", "MCHI", "VGK", "ICLN", "TAN", "GRID", "FAN", "INDA", "ESGD", "ESGE", "VEA", "IEFA", "VWO", "IEMG", "VXUS", "EFA", "VEU", "EWW", "EWT", "SPY", "IVV", "VOO", "VTI", "IJH", "IJR", "IWM", "VO", "RSP", "QUAL", "USMV", "DGRO", "MOAT", "ARKK", "XLV", "XLE", "VNQ", "XLF", "XLP", "VHT", "XLI", "XLC", "IBB", "ITA", "PAVE", "PHO", "PBW", "ESGU", "ESGV", "DSI", "LCTU"], "Aggregate": ["JPST", "IUSB", "BNDX", "BND", "AGG", "BSV"], "Government": ["EMB", "TLT", "IEF", "BIL", "SHY", "GOVT", "VGSH", "SHV"], "Growth": ["QQQ", "VUG", "IWF", "MTUM", "VGT", "XLK", "XLY", "IYW", "SMH", "MSOS", "IPO"], "Value": ["VTV", "VIG", "IWD", "VYM", "SCHD", "JEPI", "COWZ", "NOBL", "AVUV"], "Corporate": ["VCIT", "LQD", "VCSH", "IGSB", "HYG"], "Municipals": ["MUB", "VTEB"], "Mortgage-Backed": ["MBB"], "Inflation Protected": ["TIP"]}
 }
