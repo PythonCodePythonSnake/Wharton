@@ -100,8 +100,10 @@ def peer_result():
     all_tickers = sector_data[request.form["type"]][request.form["sector"]]
     result = []
     for ticker in all_tickers:
-        try: curr = values["Data"][ticker]
-        except: continue
+        if ticker not in values["Data"]:
+            print("ticker")
+            continue
+        curr = values["Data"][ticker]
         result.append([ticker, round((curr[0]-curr[1])/curr[1]*100, 2)])
     result = sorted(result, key=lambda x: x[1], reverse=True)
     return result
