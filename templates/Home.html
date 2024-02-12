@@ -6,9 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <style>
+        .loadingScreen {
+            z-index: 200;
+            background-color: #000;
+            color: white;
+            font-size: Courier;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .loadingBarOut {
+            width: 80vw;
+            border: 2px solid white;
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .loadingBarIn {
+            width: 0%;
+            background-color: white;
+            height: 16px;
+            margin: 0px 5px;
+        }
+        .bgOverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.65);
+        }
+    </style>
 </head>
 
 <body>
+    <div class="loadingScreen" id="loadingScreen">
+        <h1>Loading... <span id=loadedPercentage>0</span>%</h1>
+        <div class="loadingBarOut">
+            <div class="loadingBarIn" id="loadingBar"></div>
+        </div>
+    </div>
+    <div class="bgOverlay" id="bgOverlay"></div>
     <div class="header">
         <div class="topnav">
             <img src="{{ url_for('static', filename='favicon.png') }}" class="logo">
@@ -32,6 +78,25 @@
     <footer>
         Get in touch with us at info.stocksurgeons@gmail.com
     </footer>
+    <script>
+        const loadInterval = setInterval(() => {
+            const loadingBar = document.getElementById('loadingBar')
+            loadingBar.style.width = `${loadedPercent}%`
+            document.getElementById('loadedPercentage').innerHTML = loadedPercent
+            if (document.readyState == 'complete') {
+                console.log('done')
+                document.getElementById('loadingScreen').style.display = 'none'
+                clearInterval(loadInterval)
+            } else if (loadedPercent == 99) {
+                console.log('wait!')
+            } else {
+                loadedPercent += 1
+            }
+        }, 40)
+        window.onload = () => {
+            document.getElementById('bgOverlay').style.height = document.getElementById('bgLoop').getBoundingClientRect().height + 'px'
+        }
+    </script>
 
 </body>
 
