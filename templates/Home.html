@@ -54,7 +54,6 @@
             <div class="loadingBarIn" id="loadingBar"></div>
         </div>
     </div>
-    <div class="bgOverlay" id="bgOverlay"></div>
     <div class="header">
         <div class="topnav">
             <img src="{{ url_for('static', filename='favicon.png') }}" class="logo">
@@ -94,9 +93,6 @@
                 loadedPercent += 1
             }
         }, 40)
-        window.onload = () => {
-            document.getElementById('bgOverlay').style.height = document.getElementById('bgLoop').getBoundingClientRect().height + 'px'
-        }
     </script>
 
 </body>
